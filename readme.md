@@ -1,0 +1,1 @@
+Just some Python katas from Codewars
