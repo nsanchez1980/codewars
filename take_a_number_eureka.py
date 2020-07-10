@@ -13,7 +13,7 @@ def sum_dig_pow(a, b):
             count = count + 1
         return count
     result = []
-    digits = 0
+
     sum = 0
     for index in range(a,b+1):
         nextnumber = index
@@ -21,10 +21,8 @@ def sum_dig_pow(a, b):
             result.append(index)
         else:
             while nextnumber>9:
-                digits = how_many_digits(nextnumber)
-                thisnumber = math.fmod(nextnumber,10)
+                sum = sum + math.pow(math.fmod(nextnumber,10),how_many_digits(nextnumber))                
                 nextnumber = nextnumber//10
-                sum = sum + math.pow(thisnumber,digits)
             sum = sum + nextnumber
         if sum == index:
             result.append(index)
@@ -35,4 +33,4 @@ def sum_dig_pow(a, b):
 
 
 
-print(sum_dig_pow(0,12156000))
+print(sum_dig_pow(0,121560))
