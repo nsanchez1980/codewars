@@ -37,4 +37,4 @@ def number2words(n):
 
 
 
-print(number2words(1000))
+print(number2words(1394))
